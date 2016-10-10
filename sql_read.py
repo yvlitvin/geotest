@@ -8,12 +8,15 @@ def dict_factory(cursor, row):
     return d
 
 
-connection = sqlite3.connect("atm.sqlite")
+connection = sqlite3.connect("atm_numbers.sqlite")
 connection.row_factory = dict_factory
 
 cursor = connection.cursor()
 
-cursor.execute('select * from Ukraine')
+location_lat = 50.461502
+location_lng = 30.406538
+
+cursor.execute('SELECT * FROM Ukraine ORDER BY ((?-lat)*(?-lat)) + ((? - long)*(? - long)) ASC limit 3',(location_lat,location_lat,location_lng,location_lng))
 
 # fetch all or one we'll go for all.
 

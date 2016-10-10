@@ -6,8 +6,8 @@ google_places = GooglePlaces(YOUR_API_KEY)
 
 # You may prefer to use the text_search API, instead.
 query_result = google_places.nearby_search(
-        location='Одесса, ул. А. Воробьева, 5',
-        radius=200, types=[types.TYPE_ATM])
+        location='Николаев, пр. Центральный, 27 Б',
+        radius=20, types=[types.TYPE_ATM])
 # If types param contains only 1 item the request to Google Places API
 # will be send as type param to fullfil:
 # http://googlegeodevelopers.blogsp

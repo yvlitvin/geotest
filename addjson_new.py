@@ -30,7 +30,7 @@ r = requests.post(post_url, json={"location": {
  })
 print(r.status_code)
 print(r.json())
-r = requests.post(post_url, json={"location": {
+r = requests.post(post_url, json={"location": {`` 
  "lat": 47.261434,
  "lng": 35.324574
  },
